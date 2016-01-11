@@ -1,2 +1,2 @@
-# ajaxwebRAD Ajax IDE with full featured 
-WYSIWYG form editor
+# ajaxweb
+RAD Ajax IDE with full featured WYSIWYG form editor

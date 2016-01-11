@@ -1,0 +1,71 @@
+body {
+	margin: 0px; 
+	font-family: Tahoma,Verdana,Arial,Helvetica,sans-serif; 
+	background-color: #e2e2de;
+}
+p{
+  font-size: 14px; 
+  line-height: 20px;
+}
+
+a:link
+{
+  color: #3399FF
+}
+
+a:visited
+{
+  color: #3366CC
+}
+
+a:active
+{
+  color: #FF9900
+}
+
+h1
+{
+  color: #CC9900
+}
+
+h2
+{
+  color: #CC9900
+}
+
+h3
+{
+  color: #006699
+}
+
+h4
+{
+  color: #999900
+}
+
+h5
+{
+  color: #FF9900
+}
+
+h6
+{
+  color: #3366CC
+}
+
+
+.highlight {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #E48028;
+  font-weight: bold;
+}
+
+.index li  {
+  font-size: 12px;
+}
+
+.copyright{
+  font-size: 9px;
+  color: #4D545C;
+  
+}

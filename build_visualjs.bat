@@ -3,7 +3,7 @@ set compressTool=yuicompressor.jar
 set appPath=.\src\
 set releasePath=.\build\
 set version=2.0\
-set appname=VisualJS\
+set appname=UIDesigner\
 set apiName=visualjs.js
 
 mkdir %releasePath%

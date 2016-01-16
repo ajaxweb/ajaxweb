@@ -50,7 +50,7 @@ Class("linb.UI.jsTree", "linb.UI",{
 					key=ele;
 					value=arr[ele];
 					
-					if(key.indexOf("##value") > -1)
+					if(typeof value!="object")
 					{
 						if(value!="")
 							x=x+"<li>"+value+"</li>";

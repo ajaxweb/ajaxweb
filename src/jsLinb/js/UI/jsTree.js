@@ -40,36 +40,30 @@ Class("linb.UI.jsTree", "linb.UI",{
 			this.insertItems(jsonString);
 		},
 		
-		iterate:function(arr)
-		{
+		iterate:function(arr){
+			var jsTreeCtrl=this;
+			var x="";
+			
 			if(typeof arr=="object"){
-				var jsTreeCtrl=this;
-				var x="";
-				for(ele in arr)
-				{
+				for(ele in arr){
 					key=ele;
 					value=arr[ele];
 					
-					if(typeof value!="object")
-					{
-						if(value!="")
-							x=x+"<li>"+value+"</li>";
+					if(typeof value!="object" && value!=""){
+						´x=x+"<li>"+value+"</li>";
 					}
-					else
-					{
+					else{
 						if(!isNaN(key) && isFinite(key))
 							x=x+jsTreeCtrl.iterate(value);
 						else
 							x=x+"<li>"+key+"<ul>"+jsTreeCtrl.iterate(value)+"</ul></li>";
 					}
 				}
-				return x;
 			}
-			else{
-				if(arr!="")
-					var x="<li>"+arr+"</li>";
-				return x;
+			else if(arr!=""){
+					x="<li>"+arr+"</li>";
 			}
+			return x;
 		},
 		
 		insertItems:function(arr){
@@ -78,7 +72,7 @@ Class("linb.UI.jsTree", "linb.UI",{
 			
 			$(document.getElementById(domId)).html(ret);
 			$(document.getElementById(domId)).jstree();
-        }
+		}
 
 	},
 	

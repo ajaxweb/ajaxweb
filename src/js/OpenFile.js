@@ -98,7 +98,7 @@ Class('VisualJS.OpenFile', 'linb.Com',{
             );
             
             return children;
-            // ]]code created by jsLinb UI Builder
+            
         }, 
         _open:function (profile, item, group, e, src) {
             if(!this.combo.checkValid())return false;

@@ -65,7 +65,7 @@ Class('VisualJS.About', 'linb.Com',{
             );
             
             return children;
-            // ]]code created by jsLinb UI Builder
+            
         }, 
         _div9_aftercreated:function (profile) {
             profile.root.onClick(function(){

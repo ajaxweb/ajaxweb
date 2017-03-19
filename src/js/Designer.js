@@ -1994,7 +1994,7 @@ Class('VisualJS.Designer', 'linb.Com',{
             });
 
             var page = this,t,arr=[];
-            arr.push('// [[code created by jsLinb UI Builder\n');
+     
             arr.push('var host=this, children=[], append=function(child){children.push(child.get(0))};');
             fun = function(v, pName, argsStr, arr){
                 var self=arguments.callee, ui=v.box['linb.UI'], o=v.serialize(false), name=o.alias, b,t,ins=v.boxing();
@@ -2079,7 +2079,7 @@ Class('VisualJS.Designer', 'linb.Com',{
             });
             arr.push('\n\n');
             arr.push('return children;\n');
-            arr.push('// ]]code created by jsLinb UI Builder');
+            arr.push('');
             return arr.join('');
         },
         getClassList:function(nodes){
@@ -2292,7 +2292,7 @@ Class('VisualJS.Designer', 'linb.Com',{
             }
         },
         iniComponents:function(){
-           // [[code created by jsLinb UI Builder
+ 
             var t=this, n=[], u=linb.UI, f=function(c){n.push(c.get(0))};
 
 
@@ -2431,7 +2431,7 @@ Class('VisualJS.Designer', 'linb.Com',{
             );
 
             return n;
-            // ]]code created by jsLinb UI Builder
+            
         }
     },
     Static:{

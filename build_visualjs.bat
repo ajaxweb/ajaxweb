@@ -42,6 +42,15 @@ java -jar %compressTool% -o %releasePath%%version%jsLinb/js/linb-all.js      --n
 java -jar %compressTool% -o %releasePath%%version%%appname%js/index.js   --nomunge   index.js
 
 
+mkdir .\build\2.0\dist\jslinb
+del /s /f /q .\build\2.0\dist\jslinb\*
+xcopy /s /y .\build\2.0\jslinb\* .\build\2.0\dist\jslinb\
+REM xcopy /s /y .\build\2.0\jslinb\*.* .\build\2.0\dist\jslinb\
+copy /y .\src\loading.gif .\build\2.0\dist\
+cd .\build\2.0\dist
+..\..\..\zip.exe -r -D  ..\runtime.zip .
+cd ..\..\..\
+
 rem copy linb.js .\build\%version%\jsLinb\js\linb.js
 rem copy index.js .\build\%version%\VisualJS\js\index.js
 del /q linb.js

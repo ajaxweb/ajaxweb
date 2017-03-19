@@ -152,7 +152,7 @@ Class('VisualJS.PageEditor', 'linb.Com',{
             );
 
             return n;
-            // ]]code created by jsLinb UI Builder
+            
         }
         ,_toolbar_onclick: function(profile, item){
             var self=this;

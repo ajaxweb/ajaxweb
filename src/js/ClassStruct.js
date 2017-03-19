@@ -245,7 +245,7 @@ Class('VisualJS.ClassStruct', 'linb.Com',{
             .beforeUIValueSet("_treebarclass_beforevalueupdated")
             ,'before');
             return n;
-            // ]]code created by jsLinb UI Builder
+            
         }
     }
 });

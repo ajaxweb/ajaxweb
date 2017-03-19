@@ -262,7 +262,7 @@ Class('UIDesigner', 'linb.Com',{
         },
 
         iniComponents:function(){
-            // [[code created by jsLinb UI Builder
+          
             var host=this, children=[], append=function(child){children.push(child.get(0))};
             
             append((new linb.UI.PopMenu)
@@ -273,7 +273,7 @@ Class('UIDesigner', 'linb.Com',{
 
             append((new linb.UI.PopMenu)
                 .host(host,"popSave")
-                .setItems([{"id":"savetoserver", "caption":"$VisualJS.builder.savetoserver"}, {"id":"savetolocal", "caption":"$VisualJS.builder.savetolocal"}, {"id":"saveashtml", "caption":"$VisualJS.builder.saveashtml"}, {"id":"saveaszip", "caption":"$VisualJS.builder.saveaszip"}])
+                .setItems([{"id":"savetoserver", "caption":"$VisualJS.builder.savetoserver"}, {"id":"savetolocal", "caption":"$VisualJS.builder.savetolocal"}])
                 .onMenuSelected("_popsave_onmenusel")
             );
                         
@@ -338,7 +338,7 @@ Class('UIDesigner', 'linb.Com',{
             );
             
             return children;
-            // ]]code created by jsLinb UI Builder
+        
         },
         _onmenusel:function(profile,item){
             var id=item.id;
@@ -359,40 +359,10 @@ Class('UIDesigner', 'linb.Com',{
             }
 
             if(id=='savetolocal'){
-                if(!linb.Dom.byId(ifrid))
-                    linb('body').append(linb.create('<iframe id="'+ifrid+'" name="'+ifrid+'" style="display:none;"/>'));    
-                var hash={
-                    key:CONF.requestKey,
-                    para:{
-                        action:'downloadjs',
-                        content:content
-                    }
-                };
-                linb.Dom.submit(CONF.phpPath, hash, 'post', ifrid);
-            }else if(id=='saveashtml'){
-                if(!linb.Dom.byId(ifrid))
-                    linb('body').append(linb.create('<iframe id="'+ifrid+'" name="'+ifrid+'" style="display:none;"/>'));    
-                var hash={
-                    key:CONF.requestKey,
-                    para:{
-                        action:'downloadhtml',
-                        content:content,
-                        clsName:clsName
-                    }
-                };
-                linb.Dom.submit(CONF.phpPath, hash, 'post', ifrid);
-            }else if(id=='saveaszip'){
-                if(!linb.Dom.byId(ifrid))
-                    linb('body').append(linb.create('<iframe id="'+ifrid+'" name="'+ifrid+'" style="display:none;"/>'));    
-                var hash={
-                    key:CONF.requestKey,
-                    para:{
-                        action:'downloadzip2',
-                        content:content,
-                        clsName:clsName
-                    }
-                };
-                linb.Dom.submit(CONF.phpPath, hash, 'post', ifrid);
+				content=content.replace(/\n/g,'').replace(/\r/g,'');
+				content='<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html style=\"height:100%\" xmlns=\"http://www.w3.org/1999/xhtml\"><head>    <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />    <meta http-equiv=\"Content-Style-Type\" content=\"text/css\" />    <meta name=\"keywords\" content=\"javascript framework, RIA, SPA, client SOA, linb, jsLinb, RAD, IDE, Web IDE, widgets, javascript OOP, opensource, open-source, Ajax, cross-browser, prototype, web2.0, platform-independent, language-independent\" />    <meta name=\"description\" content=\"Web application created by Visual JS, powered by Sigma Visual framework\" />    <meta name=\"copyright\" content=\"copyright@www.sigmawidgets.com\" />    <meta http-equiv=\"imagetoolbar\" content=\"no\" />    <title>Web application powered by Sigma Visual framework</title></head>    <body style=\"height:100%;overflow:hidden;\" scroll=\"no\">        <div id=\'loading\'><img src=\"loading.gif\" alt=\"Loading...\" /></div>        <script type=\"text/javascript\" src=\"jsLinb/js/linb-all.js\"></script>        <script type=\"text/javascript\">'+content+'linb.Com.load(\'App\', function(){linb(\'loading\').remove();});</script></body></html>';
+				content=btoa(content);
+                document.write('Your File has been created!<br><a download=\'index.html\' href=\'data:application/octet-stream;base64,'+content+'\'>Save as...</a><br><a href=\'runtime.zip\'>Download Runtime...</a><br><br>You have to copy the contents of runtime.zip to the same directory as your index.html.');
             }else if(id=='savetoserver'){
                 var path=self.$url;
                 if(!path)return;

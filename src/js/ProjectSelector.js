@@ -110,7 +110,7 @@ Class('VisualJS.ProjectSelector', 'linb.Com',{
             );
             
             return children;
-            // ]]code created by jsLinb UI Builder
+            
         }, 
         _btncancel_onclick:function(){
             this.dialog.close();

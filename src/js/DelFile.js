@@ -117,7 +117,7 @@
             );
 
             return n;
-            // ]]code created by jsLinb UI Builder
+            
         },
         _btncancel_onclick:function (profile, e, value) {
             this.dialog.close();

@@ -146,7 +146,7 @@ Class('VisualJS.ObjectEditor', 'linb.Com',{
             );
 
             return n;
-            // ]]code created by jsLinb UI Builder
+            
         }
     }
 });

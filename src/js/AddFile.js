@@ -174,7 +174,7 @@ Class('VisualJS.AddFile', 'linb.Com',{
             );
 
             return n;
-            // ]]code created by jsLinb UI Builder
+            
         },
         _dialog_beforeclose:function(profile){
             this.dialog.hide();

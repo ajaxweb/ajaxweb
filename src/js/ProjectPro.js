@@ -144,7 +144,7 @@ Class('VisualJS.ProjectPro', 'linb.Com',{
             );
             
             return children;
-            // ]]code created by jsLinb UI Builder
+            
         }, 
         _dialog_beforeclose:function(profile){
             this.dialog.hide();

@@ -19,9 +19,9 @@
 */
 Class('{className}', 'linb.Com',{
     Instance:{
-        //base Class for this com
+        
         base:["linb.UI"],
-        //requried class for this com
+        
         required:[],
 
         properties:{},

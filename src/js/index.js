@@ -379,7 +379,7 @@ Class('VisualJS', 'linb.Com',{
 
                 var filecon;
                 _.observableRun([
-                    //get file content
+   
                     function(threadid){
                         var funOK = function(txt){
                             txt = typeof txt=='string'?_.unserialize(txt):txt;
@@ -400,7 +400,7 @@ Class('VisualJS', 'linb.Com',{
                                 path:value
                         }},funOK,funFail,threadid);
                     },
-                    //add tab page
+               
                     function(threadid){
                         if(filecon){
                             var item = {
@@ -457,7 +457,7 @@ Class('VisualJS', 'linb.Com',{
             }
         },
         iniComponents:function(){
-            // [[code created by jsLinb UI Builder
+ 
             var t=this, n=[], u=linb.UI, f=function(c){n.push(c.get(0))};
 
             f(
@@ -546,7 +546,7 @@ Class('VisualJS', 'linb.Com',{
             , 'before');
 
             return n;
-            // ]]code created by jsLinb UI Builder
+            
         },
         _toolbar_onclick: function(profile,item, group, e, src){
             this._menubar_onclick(this.menubar.get(0), null, item, src);

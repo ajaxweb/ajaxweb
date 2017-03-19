@@ -43,8 +43,8 @@
         save2serverOK:'Saved to server successfully',
         nosavefirst:'You are about to close a file without saving it. Do you want to continue?',
         
-        savetoserver:'Save original file (in server)',
-        savetolocal:"Save jsLinb Class file(.js) to locale disk",
+        savetoserver:'Upload project to server',
+        savetolocal:"Save index.html to local disk",
         saveashtml:"Save a runnable file(.html) to locale disk",
         saveaszip:"Save release package(.zip) to locale disk",
         

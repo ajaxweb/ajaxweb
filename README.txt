@@ -9,6 +9,11 @@ Requirements
 To Build: Java SDK 8.0+
 To Run: Mozilla Firefox
 
+Known Issues
+============
+-File has to opened manually, "Start Project" is not yet implemented
+-Loading of files is not yet implemented
+-Upload to server is not yet implemented
 
 Compiling:
 ============
@@ -24,7 +29,7 @@ Version History:
 ===============
 v1.0 - Repack of Sigma Visual AJAX GUI Builder
 v1.1 - Added JSTree element.
-v2.0 - uncoupled from PHP. Ajax Web Developer does now run without a webserver.
+v2.0 - Uncoupled from PHP. Ajax Web Developer does now run without a webserver.
 
 
 http://www.ajaxweb.ml

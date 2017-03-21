@@ -30,7 +30,8 @@ Version History:
 v1.0 - Repack of Sigma Visual AJAX GUI Builder
 v1.1 - Added JSTree element.
 v2.0 - Uncoupled from PHP. Ajax Web Developer does now run without a webserver.
-
+v2.1 - Added opening of files
+v2.2 - Removed "Run" button
 
 http://www.ajaxweb.ml
 (c) 2016 by Dennis M. Heine

@@ -1,7 +1,7 @@
 Introduction
 ============
 Due to the fact that the company who has startet Visual AJAX GUI Builder, Sigmasoft, did make it closed source and seemingly has stopped further development, we have started forking the last acceptable LGPL licensed version, which is Sigma Visual Builder 2.0.2, and relabled it under the name "Ajax Web Developer".
-It is a full featured WYSIWYG HTML Editor.
+It is a full featured WYSIWYG JavaScript Editor/Code Generator.
 ZIP.exe from http://gnuwin32.sourceforge.net/packages/zip.htm is being used.
 
 Requirements
